@@ -39,14 +39,6 @@ class _TabHomeState extends State<TabHome> with AutomaticKeepAliveClientMixin {
     super.initState();
   }
 
-  void paging() {
-    /*  _scrollController.addListener(() {
-      final maxScroll = _scrollController.position.maxScrollExtent;
-      final currentScroll = _scrollController.offset;
-      if (currentScroll >= (maxScroll * 0.9)) _bloc.getFeed(isPaging: true);
-    });*/
-  }
-
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
@@ -88,9 +80,11 @@ class _TabHomeState extends State<TabHome> with AutomaticKeepAliveClientMixin {
           AppText(title,
               style: typoW600.copyWith(fontSize: 14.5.sp, color: colorText90)),
           const Spacer(),
-          AppText(LocaleKeys.see_more,
-              style: typoW500.copyWith(
-                  fontSize: 13.sp, color: HexColor('3397E0'))),
+          InkWell(
+              child: AppText(LocaleKeys.see_more,
+                  style: typoW500.copyWith(
+                      fontSize: 13.sp, color: HexColor('3397E0'))),
+              onTap: () => _bloc.seeMoreOnClick(context)),
           SizedBox(width: contentPadding)
         ],
       );

@@ -11,13 +11,10 @@ class ItemLoading extends StatelessWidget {
       padding: const EdgeInsets.all(5),
       alignment: Alignment.center,
       child: const SizedBox(
-        height: 24,
-        width: 24,
-        child: CircularProgressIndicator(
-          color: colorOrange110,
-          strokeWidth: 4.0,
-        ),
-      ),
+          height: 24,
+          width: 24,
+          child:
+              CircularProgressIndicator(color: colorRed100, strokeWidth: 2.0)),
     );
   }
 }

@@ -19,10 +19,11 @@ class AppLocalizationEn extends AppLocalizations {
   String get network_error => 'Lỗi mạng, vui lòng thử lại sau.';
 
   @override
-  // TODO: implement search_product
   String get search_product => 'Tìm kiếm sản phẩm';
 
   @override
-  // TODO: implement see_more
   String get see_more => 'Xem thêm';
+
+  @override
+  String get add_to_cart => 'Thêm vào giỏ';
 }
