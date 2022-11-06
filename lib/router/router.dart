@@ -20,12 +20,14 @@ class Routers {
 
 class HomeRouters {
   static String root = '/';
+  static String seeMore = '/seeMore';
 
   static configureMainRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(handlerFunc: (c, p) {
       logE("ROUTE WAS NOT FOUND !!!");
     });
     router.define(root, handler: routeTabHome);
+    router.define(seeMore, handler: routeSeeMore);
   }
 }
 

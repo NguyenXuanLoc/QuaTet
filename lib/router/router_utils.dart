@@ -44,7 +44,7 @@ class RouterUtils {
     return result;
   }
 
-  static pushClimb<T>(
+  static pushNotification<T>(
       {required BuildContext context,
       required String route,
       dynamic argument,
@@ -56,7 +56,7 @@ class RouterUtils {
     return result;
   }
 
-  static pushReservations<T>(
+  static pushAccount<T>(
       {required BuildContext context,
       required String route,
       dynamic argument,
@@ -67,7 +67,6 @@ class RouterUtils {
         routeSettings: RouteSettings(arguments: argument));
     return result;
   }
-
 
   static void pop(BuildContext context,
           {dynamic result, bool isHideBottomBar = false}) =>

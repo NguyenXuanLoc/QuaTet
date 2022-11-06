@@ -1,4 +1,4 @@
-
+import 'package:base_bloc/modules/see_more/see_more_page.dart';
 import 'package:base_bloc/modules/tab_account/tab_account.dart';
 import 'package:base_bloc/modules/tab_notification/tab_notification.dart';
 import 'package:fluro/fluro.dart';
@@ -12,5 +12,8 @@ var routeSplash = Handler(handlerFunc: (c, p) => const SplashPage());
 var routeHome = Handler(handlerFunc: (c, p) => const HomePage());
 var routeTabHome = Handler(handlerFunc: (c, p) => const TabHome());
 var routeTabOrder = Handler(handlerFunc: (c, p) => const TabOrder());
-var routeTabNotification = Handler(handlerFunc: (c, p) => const TabNotification());
+var routeTabNotification =
+    Handler(handlerFunc: (c, p) => const TabNotification());
 var routeTabAccount = Handler(handlerFunc: (c, p) => const TabAccount());
+var routeSeeMore = Handler(
+    handlerFunc: (c, p) => SeeMorePage(catId: c!.settings!.arguments as int));

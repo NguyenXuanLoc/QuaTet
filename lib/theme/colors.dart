@@ -113,11 +113,12 @@ const colorGrey45 = Color(0xFFAFAFAF);
 const colorGrey50 = Color(0xFF979797);
 const colorGrey60 = Color(0xFF828282);
 const colorGrey70 = Color(0xFFA9A9A9);
-const colorGrey80 = Color(0xFF636973);
+const colorGrey80 = Color(0xFF595959);
 const colorGrey85 = Color(0xFF464646);
 const colorGrey90 = Color(0xFF37393A);
 
 const colorRed100 = Color(0xFFDB2426);
+const colorRed90 = Color(0xFFE14E50);
 
 var colorOutlineBorder = const Color(0x0fffffff).withOpacity(0.12);
 

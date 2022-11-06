@@ -23,6 +23,9 @@ class $AssetsPngGen {
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
+  /// File path: assets/svg/back.svg
+  String get back => 'assets/svg/back.svg';
+
   /// File path: assets/svg/bags.svg
   String get bags => 'assets/svg/bags.svg';
 
@@ -42,7 +45,8 @@ class $AssetsSvgGen {
   String get search => 'assets/svg/search.svg';
 
   /// List of all assets
-  List<String> get values => [bags, cart, home, notification, person, search];
+  List<String> get values =>
+      [back, bags, cart, home, notification, person, search];
 }
 
 class Assets {

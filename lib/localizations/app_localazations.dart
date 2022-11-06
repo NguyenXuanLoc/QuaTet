@@ -115,8 +115,12 @@ abstract class AppLocalizations {
   String get account;
 
   String get network_error;
+
   String get search_product;
+
   String get see_more;
+
+  String get add_to_cart;
 }
 
 class _AppLocalizationsDelegate

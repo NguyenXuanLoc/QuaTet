@@ -1,6 +1,9 @@
 import 'package:base_bloc/base/hex_color.dart';
+import 'package:base_bloc/data/globals.dart';
+import 'package:base_bloc/router/router_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../gen/assets.gen.dart';
 import '../theme/app_styles.dart';
@@ -12,20 +15,32 @@ PreferredSizeWidget appBarWidget(
         Widget? leading,
         Widget? title,
         double? titleSpacing = 16,
-        double? leadingWidth = 0,
+        double? leadingWidth,
         bool centerTitle = false,
         double? toolbarHeight,
         String? titleStr,
         Color? backgroundColor,
         List<Widget>? action,
-        bool isHideBottomBar = false,
+        bool isBack = false,
         bool automaticallyImplyLeading = true}) =>
     AppBar(
         toolbarHeight: toolbarHeight,
         automaticallyImplyLeading: automaticallyImplyLeading,
         leadingWidth: leadingWidth,
         centerTitle: centerTitle,
-        leading: leading,
+        leading: leading ??
+            (isBack
+                ? InkWell(
+                    child: Padding(
+                      padding: EdgeInsets.only(left: contentPadding),
+                      child: const Icon(
+                        Icons.arrow_back_ios,
+                        size: 20,
+                      ),
+                    ),
+                    onTap: () => RouterUtils.pop(context),
+                  )
+                : const SizedBox()),
         titleSpacing: titleSpacing,
         elevation: 0,
         title: title ??
